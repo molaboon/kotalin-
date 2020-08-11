@@ -1,0 +1,60 @@
+Kotlin 函式
+fun 函式名稱 (帶入變數 : 變數類型):返回值類型 {
+函式內容
+
+}
+
+1)常數
+val a: Int = 1 // 初期有值
+val b = 2 // 類型自動推導為int
+val c: Int // 沒有起始值時初始化請給予變數類型
+c = 3 // 自動推倒為常數並給予變數類型為int
+(2)變數
+var x = 5 // 初始化初期有值自動推導為int
+
+(2)try catch 通常用在程式運行錯誤 印出錯誤訊息
+try (表達式){
+
+}
+catch{
+
+}
+
+(1)when
+switch 取代
+when (x) {
+1 -> print("x == 1")
+2 -> print("x == 2")
+else -> { // Note the block
+print("x is neither 1 nor 2")
+}
+}
+when (x) {
+0,1 -> print("x == 0 or x == 1")
+else -> print("otherwise")
+}
+when (x) {
+parseInt(s) -> print("s encode x")
+else -> print("s does not encode x")
+}
+
+Kotlin 函式
+fun 函式名稱 (帶入變數 : 變數類型):返回值類型 {
+函式內容
+
+}
+
+
+可以用in 或!in 偵測變數是否在集合或者範圍中
+when (x) {
+in 1..10 -> print("x is in the range")
+in validNumbers -> print("x is valid")
+!in 10..20 -> print("x is outside the range")
+else -> print("none of the above")
+}
+可以用is或!is來判斷值的類型
+
+val hasPrefix = when (x) {
+is String -> x.startsWith("prefix")
+else -> false
+}
