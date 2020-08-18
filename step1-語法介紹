@@ -9,6 +9,8 @@ val a(變數名稱): Int(型別) = 1(值) // 初期有值
 val b = 2 // 類型自動推導為int
 val c: Int // 沒有起始值時初始化請給予變數類型
 c = 3 // 自動推倒為常數並給予變數類型為int
+val x:String?=null  加個問號使得輸出可以為空白
+
 (2)變數
 var x = 5 // 初始化初期有值自動推導為int
 
@@ -42,6 +44,10 @@ Kotlin 函式
 fun 函式名稱 (帶入變數 : 變數類型):返回值類型 {
 函式內容
 
+}
+
+fun getGreet(item:String){
+  println("hello"+item)
 }
 
 
