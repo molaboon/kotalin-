@@ -25,3 +25,43 @@ for (i in 0 until list.size){
 -> 0 1 2 3 4
 輸出結果相同
 但程式比較易讀
+
+(4)
+可以使用 step 來跳過幾次索引
+for (i in 0 .. 10 step 2 ){
+    println(i)
+}
+-> 0 2 4 6 8 10
+
+(5)
+Kotlin 還支援將字元當作範圍來建立迴圈
+
+for (i in 'a' .. 'g'){
+    println(i)
+}
+->a b .....g
+也可以用step
+
+(6)
+遍歷一個集合，可以直接放到 for 迴圈中 in 一個集合
+
+val list = arrayListOf<Int>(1, 2, 3, 4, 5)
+
+for(item in list){
+    println(item)
+}
+////////////////////////////////////////////////
+使用 foreach 來達成
+
+list.forEach { 
+    item->
+    println(item)
+}
+////////////////////////////////////////////////
+在 for 迴圈中使用 indices
+
+for (i in list.indices) {
+    println(list[i])
+}
+
+->1 2 3 4 5
