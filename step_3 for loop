@@ -1,0 +1,27 @@
+(1)
+for (i in 0 .. 5){
+    println(i)
+}
+
+->0 1 2 3 4 5
+
+(2)
+for (i in 5 downTo 0){
+    println(i)
+}
+
+-> 5 4 3 2 1 0
+
+(3)
+for (i in 0 until 5) {
+    println(i)
+}
+//////////////////////////////////////////////////////////
+val list = arrayListOf<Int>(1, 2, 3, 4, 5)
+
+for (i in 0 until list.size){
+    println(list[i])
+}
+-> 0 1 2 3 4
+輸出結果相同
+但程式比較易讀
