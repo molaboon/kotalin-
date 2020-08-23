@@ -1,0 +1,12 @@
+val ARRAY=arrayof("Me","You","They")
+
+ARRAY.foreach
+{
+(1)
+  it:String
+  println(it)
+ 
+(2)
+  ARRAY->println(ARRAY)      /*兩者compile的結果一樣*/
+}
+->Me,You,They
