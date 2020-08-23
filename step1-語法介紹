@@ -47,7 +47,8 @@ fun 函式名稱 (帶入變數 : 變數類型):返回值類型 {
 }
 
 fun getGreet(item:String){
-  println("hello"+item)
+  println("hello"+item) 
+  or println("$item") $=呼叫變數
 }
 
 
