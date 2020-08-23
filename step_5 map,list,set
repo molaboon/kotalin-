@@ -11,9 +11,13 @@ map.foreach{
 
 (2)mutable(可以有彈性的放入數值)
 val map = mutableMapOf<Int, Any?>()
-println("map.isEmpty() is ${map.isEmpty()}") // true
+println("map.isEmpty() is ${map.isEmpty()}") 
+
+->true
 
 map[1] = "x"
 map[2] = 1.05
 // Now map contains something:
-println(map) // {1=x, 2=1.05}
+println(map) 
+
+->{1=x, 2=1.05}
