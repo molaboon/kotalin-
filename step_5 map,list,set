@@ -1,6 +1,7 @@
 Kotlin 中的 List、Map、Set 只能讀取，是無法進行修改，若需要可讀可寫，需使用 MutableList、MutableMap、MutableSet。
 
-[Map]
+[Map] 特性： 採 key、value 方式存放，key 唯一不能重覆。
+
 (1) map
 val map=mapOf(1 to "a",2 to "b",3 to "c") 數字為key 子母為value
 map.foreach{
@@ -10,7 +11,7 @@ map.foreach{
 -> 1->a 2->b 3->c 
 
 (2)mutable(可以有彈性的放入數值)
-val map = mutableMapOf<Int, Any?>()
+(a)val map = mutableMapOf<Int, Any?>()
 println("map.isEmpty() is ${map.isEmpty()}") 
 
 ->true
@@ -21,3 +22,62 @@ map[2] = 1.05
 println(map) 
 
 ->{1=x, 2=1.05}
+(b)新增資料
+mutableMap.put("1", 666)
+
+(c)獲取資料
+mutableMap.get("2")
+println(mutableMap.get("2"))
+
+(d)刪除所有資料
+mutableMap.clear()
+println(mutableMap)
+
+[List] 集合特性：按照順序排列，可以放重覆的物件
+
+[List]
+宣告一個 List 集合，並初始化資料，kotlin 會根據資料，自動推斷，資料型別
+var lists = listOf(666,777,888)
+println(lists[1])
+->666
+
+[Mutablelist]
+宣告一個 MutableList 資料型態為整數的集合變數
+var mutableList: MutableList<Int>  = mutableListOf()
+
+新增資料
+mutableList.add(666)
+
+移除資料為 666 的資料（需要注意的是這裏跟 Java 不同，此處移除不是根據索引筆數）
+mutableList.remove(666)
+println(mutableList)
+
+根據索引筆數刪除方式
+mutableList.remove(mutableList[1])
+println(mutableList)
+
+刪除全部 mutableList 內的資料
+mutableList.clear()
+println(mutableList)
+
+[Set] 特性：沒有特定順序，且沒有重覆的物件
+
+(1)set
+var set = setOf(666,777,888)
+println(set)
+
+(2)var mutableSet: MutableSet<Int> = mutableSetOf()
+
+(a)新增資料
+mutableSet.add(666)
+
+(b)移除資料
+mutableSet.remove(666)
+println(mutableSet)
+
+(c)判斷元素，是否包含在 Set 集合內
+println(mutableSet.contains(666))
+
+(d)清除所有資料
+mutableSet.clear()
+println(mutableSet)
