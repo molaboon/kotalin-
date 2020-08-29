@@ -4,7 +4,7 @@ fun 函式名稱 (帶入變數 : 變數類型):返回值類型 {
 
 }
 
-fun main (args Array:String)
+fun main (args Array:String)   <- 括號裡面不一定要有東西
 {
 }
 
