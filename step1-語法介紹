@@ -4,6 +4,10 @@ fun 函式名稱 (帶入變數 : 變數類型):返回值類型 {
 
 }
 
+fun main (args Array:String)
+{
+}
+
 1)常數
 val a(變數名稱): Int(型別) = 1(值) // 初期有值  
 val b = 2 // 類型自動推導為int
