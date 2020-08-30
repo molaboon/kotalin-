@@ -1,0 +1,7 @@
+「field」語法代表原資料的意思。
+「field」語法代表屬性值的意思，value參數則是主程式的傳入值。
+
+set(value) {
+            field = if (value < 0) 0 else value
+        }
+        
