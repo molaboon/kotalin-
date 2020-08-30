@@ -1,7 +1,12 @@
 「field」語法代表原資料的意思。
 「field」語法代表屬性值的意思，value參數則是主程式的傳入值。
 
+set方法的存取權限不可大於get方法。
+
 set(value) {
             field = if (value < 0) 0 else value
         }
         
+Kotlin比Java多了一種存取權限，叫做「internal」，它的範圍涵蓋當前的模組。
+簡單的程式專案一般只有一個模組，因此我們看到的大多數範例中，
+internal的效果常常與public相同，但實質範圍仍小於public。
