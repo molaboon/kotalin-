@@ -1,1 +1,48 @@
 Interface 這個類別的物件可以用來做甚麼
+
+interface Exportable {
+    var exportLocation: String
+
+    fun getFileName(): String
+    fun getExportContent(): String
+    fun getExportPath() = "$exportLocation\\${getFileName()}"
+}
+
+這個介面有一個抽象屬性，代表目標輸出位置。有兩個抽象方法，用來取得檔案名稱與輸出內容。
+和一個非抽象方法，用來取得輸出路徑。
+//在設計介面時，與抽象類別不同的地方是，介面不能宣告已經給予初始值的屬性。
+
+class Product(val id: String,
+              var name: String,
+              var price: Int,
+              var unit: String) : Exportable {
+    override var exportLocation = "\\product"
+
+    override fun getFileName() = "$id $name.txt"
+    override fun getExportContent() = 
+        "$id\n$name\n單價：$price/$unit"
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class Article(val id: String,
+              var title: String,
+              var content: String,
+              var author: String) : Exportable {
+    override var exportLocation = "\\article"
+
+    override fun getFileName() = "$title-$author"
+    override fun getExportContent() = "$title\n$content"
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+fun main(args: Array<String>) {
+    val product = Product("BK001", "數學複習講義", 320, "本")
+    val article = Article("AR002", "Kotlin教學系列",
+            "這系列文章，希望能幫助學過Java的人上手Kotlin的語法...", 
+            "Vincent")
+    exportFile(product)
+    exportFile(article)
+}
+
+fun exportFile(item: Exportable) {
+    println("${item.getExportPath()} 已經儲存！")
+    println(item.getExportContent())
+}
