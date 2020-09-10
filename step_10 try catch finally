@@ -1,0 +1,22 @@
+使用try-catch-finally捕獲異常
+
+try {
+    doSomething()
+} 
+catch(e: MyException) {
+    handle(e)
+} 
+finally {
+    cleanup()
+}
+
+還可以捕獲多個異常
+catch(e: FileSystemException) {
+    handle(e)
+}
+catch(e: NetworkException) {
+    handle(e)
+}
+catch(e: MemoryException) {
+    handle(e)
+}
